@@ -32,12 +32,15 @@ namespace DataAccess.Concrete.Repositories
         }
 
         public void Update(Category category)
-public List<Category> List(Expression<Func<Category, bool>> filter)
+        {
+            context.SaveChanges();
+        }
+        public List<Category> List(Expression<Func<Category, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        context.SaveChanges();
+       
         }
     }
-}
+
