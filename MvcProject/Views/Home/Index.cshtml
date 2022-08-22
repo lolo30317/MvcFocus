@@ -2,11 +2,35 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-</div>
 
-<h3>sa</h3>
+<header>ÖRNEK TABLO</header>
+<br />
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ÜRÜN</th>
+        <th>FİYAT</th>
+        <th>DURUM</th>
+        <th>GÜNCELLE</th>
+    </tr>
+   <tr>
+       <td>1</td>
+       <td>Kalem</td>
+       <td>10 tl</td>
+       <td>Satışta</td>
+       <td class="btn btn-success">Güncelle</td>
+   </tr>
+   <tr>
+       <td>2</td>
+       <td>Kitap</td>
+       <td>25 tl</td>
+       <td>Tükendi</td>
+       <td class="btn btn-success">Güncelle</td>
+   </tr>
+</table>
+
+<button class="btn btn-info">Yeni Kategori</button>
+<button class="btn btn-warning">Kategori Listesi</button>
+<button class="btn btn-danger">Kategori Açıklamaları</button>

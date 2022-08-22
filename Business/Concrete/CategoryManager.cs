@@ -1,4 +1,6 @@
-﻿using DataAccess.Concrete.Repositories;
+﻿using Business.Abstract;
+using DataAccess.Abstract;
+using DataAccess.Concrete.Repositories;
 using Entity.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,24 +10,19 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class CategoryManager
+    public class CategoryManager : ICategoryService
     {
-        GenericRepository<Category> category = new GenericRepository<Category>();
+        ICategoryDal _categoryDal;
 
-        public List<Category> GetAll()
+        public CategoryManager(ICategoryDal categoryDal)
         {
-            return category.List();
+            _categoryDal = categoryDal;
         }
-        public void Add(Category c)
+
+
+        public List<Category> GetList()
         {
-            if (c.CategoryName == "" || c.CategoryName.Length<=2 || c.CategoryDescription == "" || c.CategoryName.Length>=50)
-            {
-                //hata
-            }
-            else
-            {
-                category.Add(c);
-            }
+            return _categoryDal.List(); ;
         }
     }
 }

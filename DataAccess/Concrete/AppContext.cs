@@ -10,7 +10,7 @@ namespace DataAccess.Concrete
 {
     public class AppContext:DbContext
     {
-        public DbSet<Contact> Abouts { get; set; }
+        public DbSet<About> Abouts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Content> Contents { get; set; }
