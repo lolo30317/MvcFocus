@@ -2274,6 +2274,7 @@
     <Content Include="AdminLTE-3.0.4\README.md" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\AdminCategory\Index.cshtml" />
+    <Content Include="Views\AdminCategory\AddCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
