@@ -51,8 +51,11 @@ namespace MvcProject.Controllers
         public ActionResult DeleteCategory(int id)
         {
             var categoryValue=categoryManager.GetById(id);
-            return View();
+            categoryManager.CategoryRemove(categoryValue);
+            return RedirectToAction("Index");
         }
+
+
 
         }
     }

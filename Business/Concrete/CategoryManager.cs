@@ -24,6 +24,11 @@ namespace Business.Concrete
             _categoryDal.Add(category);
         }
 
+        public void CategoryRemove(Category category)
+        {
+            _categoryDal.Delete(category);
+        }
+
         public Category GetById(int id)
         {
             return _categoryDal.Get(x=>x.CategoryId==id);
